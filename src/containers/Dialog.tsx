@@ -242,7 +242,7 @@ export class Dialog extends React.Component<IProps, IState> {
     const { visible, styles } = this.state;
     const { _OverlayCloseRender, _CardRender } = this;
     return (
-      <Modal transparent={true} visible={visible} animated={false} onShow={this._showModalHandler}>
+      <Modal transparent={true} supportedOrientations={["portrait" , "portrait-upside-down" ,"landscape" ,"landscape-left" , "landscape-right"]} visible={visible} animated={false} onShow={this._showModalHandler}>
         <Animated.View style={StyleSheet.flatten([styles.backgroundContainer, { opacity: this._opacity }])} />
         <_OverlayCloseRender />
         <_CardRender />
